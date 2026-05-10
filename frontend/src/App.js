@@ -22,7 +22,7 @@ import {
   PartyPopper } from
 "lucide-react";
 
-const API = "/api";
+const GOOGLE_SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfycbx9bHtMsPx2KVWjXYR3Xaru_qqc-WZnTZPtsnyP_3oMEkgaQCMzRAUUjWvei57ESFVH/exec";
 
 /* ─── DATA ─────────────────────────────────────────────────────────── */
 const NAV_LINKS = [
@@ -668,7 +668,9 @@ const EnrollForm = () => {
     setErrorMsg("");
     setStatus("loading");
     try {
-      await axios.post(`${API}/enroll`, form);
+      await axios.post(GOOGLE_SHEETS_WEBHOOK, form, {
+        headers: { "Content-Type": "text/plain" }
+      });
       setStatus("success");
       setForm({ name: "", phone: "", location: "", course: "", message: "" });
     } catch (err) {
