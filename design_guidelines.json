@@ -1,0 +1,100 @@
+{
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "design_philosophy": "A bold, high-contrast, confidence-inspiring layout mimicking the clarity of road signs. The goal is lead capture (calls and visits) for a local driving school. Focus on large typography, high-visibility CTA buttons, and distinct content sections with asymmetrical grids for visual interest.",
+  "colors": {
+    "primary": "#FFB800",
+    "primary_hover": "#F59E0B",
+    "background_base": "#FDFDFD",
+    "background_surface": "#F8FAFC",
+    "background_card": "#FFFFFF",
+    "text_main": "#0F172A",
+    "text_muted": "#475569",
+    "border_color": "#E2E8F0",
+    "accent_success": "#10B981"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cabinet Grotesk",
+      "body": "Work Sans"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl font-black tracking-tighter leading-none text-slate-900",
+      "h2": "text-3xl sm:text-4xl font-bold tracking-tight text-slate-900",
+      "h3": "text-2xl font-semibold tracking-tight text-slate-900",
+      "body": "text-base sm:text-lg leading-relaxed text-slate-600",
+      "label": "text-sm uppercase tracking-[0.2em] font-bold text-amber-600"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Use generous spacing. Sections should have py-24 or py-32. Internal card padding should be p-8 to p-12.",
+    "bento_grid": "For the 'Services' section, use a bento grid (grid-cols-1 md:grid-cols-12 gap-6). Combine span-4 and span-8 to create dynamic asymmetrical blocks.",
+    "container": "Max-width 7xl (max-w-7xl) with px-6 md:px-12 mx-auto."
+  },
+  "components": {
+    "header": {
+      "style": "Glassmorphism navigation. backdrop-blur-xl bg-white/80 border-b border-slate-200. Sticky top-0 z-50.",
+      "behavior": "Logo on left, navigation links centered (desktop), 'Call Now' CTA on right with primary color."
+    },
+    "hero": {
+      "style": "Side-by-side or split layout. Left side: High-impact typography with primary CTA. Right side: Large rounded image of a scooter rider.",
+      "cta": "Large button, bg-[#FFB800] text-black font-bold hover:bg-[#F59E0B] shadow-[4px_4px_0px_#0F172A] hover:translate-y-1 hover:shadow-none transition-all."
+    },
+    "services": {
+      "style": "High-contrast bento cards. bg-white border-2 border-slate-900 shadow-[8px_8px_0px_#0F172A]. Rounded-2xl.",
+      "items": "1. Basic 2-Wheeler Riding, 2. License Preparation. Use lucide-react icons (Bike, FileText)."
+    },
+    "testimonials": {
+      "style": "Marquee or grid of clean cards. Quote text in italics, customer name bold, 5-star icons.",
+      "background": "Use a subtle patterned or soft-colored section background (bg-slate-50)."
+    },
+    "contact": {
+      "style": "Split section: Contact details (Address, Phone) on one side, Google Map iframe on the other.",
+      "map_link": "https://maps.app.goo.gl/UHqRmVcc8FJLZ7a58"
+    }
+  },
+  "assets": {
+    "icons": "lucide-react",
+    "images": [
+      {
+        "category": "hero",
+        "description": "Woman riding an electric scooter on a sunny street, conveying confidence and ease.",
+        "url": "https://images.unsplash.com/photo-1761824053081-2c1cd7c7893f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjByaWRpbmclMjBzY29vdGVyJTIwY2l0eXxlbnwwfHx8fDE3NzY4NzQ0MjN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "about_us",
+        "description": "Man standing with a red Vespa scooter holding a helmet, friendly instructor vibe.",
+        "url": "https://images.pexels.com/photos/4424077/pexels-photo-4424077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
+      {
+        "category": "services",
+        "description": "Person riding a white scooter, used to illustrate basic riding courses.",
+        "url": "https://images.unsplash.com/photo-1760897007938-16f02ccabf41?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjByaWRpbmclMjBzY29vdGVyJTIwY2l0eXxlbnwwfHx8fDE3NzY4NzQ0MjN8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "background_texture",
+        "description": "Asphalt texture with yellow road lines for decorative background accents.",
+        "url": "https://images.pexels.com/photos/18887105/pexels-photo-18887105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      }
+    ]
+  },
+  "seo_and_content": {
+    "meta_title": "Learn and Drive | Top 2-Wheeler Driving School in Khajaguda, Hyderabad",
+    "meta_description": "Master 2-wheeler riding with Learn and Drive. Expert instructors, basic riding courses, and complete driving license preparation in Khajaguda, Hyderabad.",
+    "keywords": "2-wheeler driving school, scooty driving classes, driving license preparation, Hyderabad, Khajaguda, Learn and Drive",
+    "school_name": "Learn and Drive",
+    "address": "Road, opp. ASBL, Janmabhoomi Colony, Chaitanya Enclave, Khajaguda, Makthakousarali, Telangana 500104",
+    "phone": "9985747111"
+  },
+  "testing": {
+    "requirements": "All interactive elements, buttons, inputs, and key navigation links must include data-testid attributes (e.g., data-testid='hero-cta-button')."
+  },
+  "instructions_to_main_agent": [
+    "Use a pure React + Tailwind architecture. No heavy backend dependencies.",
+    "Ensure standard HTML5 semantic tags are used (header, section, footer).",
+    "Include a React-based smooth scrolling for navigation links.",
+    "Integrate Lucide React for consistent iconography (stars, map pins, phones).",
+    "Embed the Google Map iframe provided in the problem statement inside the Contact section.",
+    "Follow the specific bold typography sizing and asymmetrical grid styles outlined in the guidelines."
+  ]
+}
